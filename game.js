@@ -18,7 +18,7 @@ const gameBoard = document.getElementById('game_board');
 const main = (currentTime) => {
     if (gameOver) {
         if (confirm('Вы проигали. Нажми ОК для перезапуска')) {
-            window.location = '/Snake_game/';
+            document.location.reload(true);
         }
         return
     }
