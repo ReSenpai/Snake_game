@@ -20,12 +20,12 @@ const main = (currentTime) => {
         if (confirm('Вы проигали. Нажми ОК для перезапуска')) {
             document.location.reload(true);
         }
-        return
+        return;
     }
 
     window.requestAnimationFrame(main);
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
-    if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
+    if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
     
     lastRenderTime = currentTime;
 
@@ -48,6 +48,6 @@ const draw = () => {
 }
 
 const chekDeath = () => {
-    gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+    gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
 }
 
